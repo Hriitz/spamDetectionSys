@@ -46,6 +46,7 @@ AUTH_USER_MODEL = 'api.CUser'
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
+    
 ]
 
 # settings.py

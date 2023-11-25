@@ -14,8 +14,8 @@ class CustomUserManager(BaseUserManager):
         return user
 
     def create_superuser(self, phone_number, password=None, **extra_fields):
-        # extra_fields.setdefault('is_staff', True)
-        # extra_fields.setdefault('is_superuser', True)
+        extra_fields.setdefault('is_superuser', True)
+        extra_fields.setdefault('is_staff', True)
 
         return self.create_user(phone_number, password, **extra_fields)
 
@@ -24,8 +24,20 @@ class CUser(AbstractBaseUser):
     name = models.CharField(max_length=255)
     phone_number = models.CharField(unique=True, max_length=10)
     email = models.EmailField(blank=True, null=True)
+    is_superuser = models.BooleanField(default= False)
+    is_staff = models.BooleanField(default= False)
+    
+    
 
     objects = CustomUserManager()
+    
+    def has_perm(self, perm, obj=None):
+        # This method is required by Django's admin
+        return self.is_staff
+
+    def has_module_perms(self, app_label):
+        # This method is required by Django's admin
+        return self.is_staff
 
     USERNAME_FIELD = 'phone_number'
     REQUIRED_FIELDS = ['name']
