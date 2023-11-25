@@ -1,6 +1,6 @@
 # Spam Detection System
 
-My Django Project is a web application developed using Django, providing user registration, authentication, personal contacts, spam detection, and search features.
+Spam detection system is a web application developed using Django, providing user registration, authentication, personal contacts, spam detection, and search features.
 
 ## Features
 
