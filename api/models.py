@@ -1,4 +1,3 @@
-# authentication/models.py
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.db import models
 import uuid
@@ -23,7 +22,7 @@ class CustomUserManager(BaseUserManager):
 class CUser(AbstractBaseUser):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
     name = models.CharField(max_length=255)
-    phone_number = models.CharField(unique=True, max_length=15)
+    phone_number = models.CharField(unique=True, max_length=10)
     email = models.EmailField(blank=True, null=True)
 
     objects = CustomUserManager()
@@ -37,7 +36,7 @@ class CUser(AbstractBaseUser):
 class PersonalContact(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=255)
-    phone_number = models.CharField(max_length=15)
+    phone_number = models.CharField(max_length=10)
     email = models.EmailField(blank=True, null=True)
     user = models.ForeignKey('CUser', on_delete=models.CASCADE, related_name='personal_contacts')
     
