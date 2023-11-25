@@ -41,8 +41,9 @@ Spam detection system is a web application developed using Django, providing use
 2. ```pip install -r requirements.txt```
 
 3. Run migrations:
-   ```python manage.py makemigrations```
-   ```python manage.py migrate```
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
 
 4. Run app using: ```python manage.py runserver```
 
