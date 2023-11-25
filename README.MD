@@ -42,12 +42,10 @@ Spam detection system is a web application developed using Django, providing use
 
 3. Run migrations:
    ```python manage.py makemigrations```
-   
+   ```python manage.py migrate```
 
-4. ```python manage.py migrate```
-
-5. Run app using: ```python manage.py runserver```
+4. Run app using: ```python manage.py runserver```
 
 
-6. Implemented Swagger-UI for API Testing
+5. Implemented Swagger-UI for API Testing
    for local Environment it is running at http://127.0.0.1:8000/swagger/
