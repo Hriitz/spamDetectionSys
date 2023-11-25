@@ -34,7 +34,7 @@ class DetailedPersonSerializer(serializers.ModelSerializer):
                 'name': instance.name,
                 'phone_number': instance.phone_number,
                 'email': instance.email,
-                'spam_likelihood': 0,  # Adjust accordingly if needed
+                'spam_likelihood': 0,
             }
         elif isinstance(instance, PersonalContact):
             return super().to_representation(instance)

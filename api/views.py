@@ -7,7 +7,7 @@ from .models import CUser, PersonalContact, SpamNumber
 from .serialiazers import CustomUserSerializer, LoginSerializer, UserSerializer ,PersonalContactSerializer, SpamNumberSerializer, DetailedPersonSerializer
 from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
-from django.db.models import Q
+
 
 
 class SignUpAPIView(generics.CreateAPIView):
