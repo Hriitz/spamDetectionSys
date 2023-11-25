@@ -36,8 +36,6 @@ Spam detection system is a web application developed using Django, providing use
    ```bash
    git clone https://github.com/Hriitz/spamDetectionSys.git
    cd spamDetectionSys
-
-
 2. ```pip install -r requirements.txt```
 
 3. Run migrations:
@@ -46,7 +44,6 @@ Spam detection system is a web application developed using Django, providing use
    python manage.py migrate
 
 4. Run app using: ```python manage.py runserver```
-
 
 5. Implemented Swagger-UI for API Testing
    for local Environment it is running at http://127.0.0.1:8000/swagger/
