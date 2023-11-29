@@ -1,6 +1,6 @@
 # Spam Detection System
 
-This is the backend clone of True Caller. Spam detection system is a web application developed using Django, providing user registration, authentication, personal contacts, spam detection, and search features.
+This is the backend clone of Truecaller. Spam detection system is a web application developed using Django, providing user registration, authentication, personal contacts, spam detection, and search features.
 
 ## Features
 
